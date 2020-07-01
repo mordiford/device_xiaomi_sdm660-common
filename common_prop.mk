@@ -118,6 +118,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=cherokee
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    vendor.bluetooth.soc=cherokee
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.privapp.list=org.codeaurora.snapcam \
@@ -198,11 +201,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # LMKD
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.low_ram=false \
-    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=800 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true\
     ro.lmk.kill_timeout_ms=100 \
     ro.lmk.use_minfree_levels=true \
-    ro.lmk.log_stats=true
+    ro.lmk.log_stats=true \
+    ro.lmk.use_psi=false
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
