@@ -249,13 +249,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
-# Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.qti.sys.fw.bg_apps_limit=36 \
-    ro.vendor.at_library=libqti-at.so \
-    vendor.perf.gestureflingboost.enable=true
-
 # Proximity
 PRODUCT_PROPERTY_OVERRIDES += \
     gsm.proximity.enable=true
@@ -266,7 +259,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
     persist.vendor.dpm.feature=1 \
     persist.vendor.dpm.nsrm.bkg.evt=3955 \
-    persist.vendor.qcomsysd.enabled=1
+    persist.vendor.qcomsysd.enabled=1 \
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # QTI
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
